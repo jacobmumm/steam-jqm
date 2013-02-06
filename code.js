@@ -7,7 +7,7 @@ $(function(){
            for(var i=0; i<data.playerstats.achievements.length;i++){
                var newItem = $('<li></li>');
                var achievement = data.playerstats.achievements[i];
-               newItem.text(achievement.apiname);
+               newItem.html('<a href="#">'+achievement.apiname+'</a>');
                newItem.attr('data-icon', achievement.achieved ? 'check' : 'minus');
                $("#achievementList").append(newItem);
            }
