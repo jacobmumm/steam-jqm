@@ -9,5 +9,7 @@ $(function(){
                newItem.text(data.playerstats.achievements[i].apiname);
                $("#achievementList").append(newItem);
            }
+           
+           $("#achievementList").listview("refresh");
         });
 });
