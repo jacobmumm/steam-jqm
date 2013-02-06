@@ -6,7 +6,9 @@ $(function(){
            
            for(var i=0; i<data.playerstats.achievements.length;i++){
                var newItem = $('<li></li>');
-               newItem.text(data.playerstats.achievements[i].apiname);
+               var achievement = data.playerstats.achievements[i];
+               newItem.text(achievement.apiname);
+               newItem.attr('data-icon', achievement.achieved ? 'check' : 'minus');
                $("#achievementList").append(newItem);
            }
            
