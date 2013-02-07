@@ -32,4 +32,4 @@ function curl_json($base_url='',$query='',$json=true){
     }
 }
 
-curl_json();
+echo curl_json();
