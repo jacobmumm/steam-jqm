@@ -26,6 +26,7 @@ $(function(){
     });
     
     $("#usersList a").click(function(){
+        console.log('here');
         var uid = $(this).data("uid");
         $("#userName") = $(this).text();
         $.getJSON("users.php?q=user&id="+uid, function(data){
