@@ -1,5 +1,5 @@
 $(function(){
-    $.getJSON("achievements.json", function(data){
+    /*$.getJSON("achievements.json", function(data){
            console.log(data); 
            
            $("#gameName").text(data.playerstats.gameName);
@@ -13,5 +13,15 @@ $(function(){
            }
            
            $("#achievementList").listview("refresh");
-        });
+        });*/
+    // $.get("users.php?q=users", function(data){}, "json");
+    $.getJSON("users.php?q=users", function(data){
+        for(var i=0; i<data.length; i++){
+            var newItem = $('<li></li>');
+            var user = data[i];
+            newItem.html('<a href="#user">'+user.name+'</a>');
+            $("#usersList").append(newItem);
+        }
+        $("#usersList").listview("refresh");
+    });
 });
