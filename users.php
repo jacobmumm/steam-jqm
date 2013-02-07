@@ -21,7 +21,13 @@ switch($_GET['q']){
         break;
     case 'user':
         $user_details = array(
-            
+            1 => array('street'=>'123 Fourth Street', 'city'=>'City', 'zipcode'=>'90210'),
+            2 => array('street'=>'543 21st Street', 'city'=>'Olean', 'zipcode'=>'14760'),
+            3 => array('street'=>'274 West Fifth= Street', 'city'=>'Oswego', 'zipcode'=>'13126'),
+            4 => array('street'=>'123 Fourth Street', 'city'=>'City', 'zipcode'=>'90210'),
+            5 => array('street'=>'123 Fourth Street', 'city'=>'City', 'zipcode'=>'90210'),
+            6 => array('street'=>'123 Fourth Street', 'city'=>'City', 'zipcode'=>'90210'),
         );
+        echo json_encode($user_details[$_GET['id']]);
         break;
 }
