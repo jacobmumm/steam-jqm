@@ -1,6 +1,6 @@
 <?php
 
-curl_json();
+echo curl_json();
 
 function curl_json($base_url='',$query='',$json=true){
 
