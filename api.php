@@ -3,7 +3,7 @@
 function curl_json($base_url='',$query='',$json=true){
 
     //set the url to use
-    $target_url = 'http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=440&key=B288A76BB1621D6D9F02D6DA5DC54454&steamid=76561197960432907';
+    $target_url = 'http://api.steampowered.com/IEconItems_440/GetPlayerItems/v0001/?key=B288A76BB1621D6D9F02D6DA5DC54454&steamid=76561197960432907';
     $url == ($base_url='' ? $target_url : $base_url)  ;
 
     $ch = curl_init();
